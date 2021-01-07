@@ -1,20 +1,22 @@
-import { TextField } from "@material-ui/core";
 import React, { useState } from "react";
 import hebrew from "../../../hebrew";
-export default function Email() {
+import { InputNames, InputTypes, IOnChange } from "../../../types/input";
+import RTLTextField from "../../BasicTextField/BasicTextField";
+export default function Email(props: IOnChange) {
   const [email, setEmail] = useState<string>("");
 
   function handleChange(event: React.ChangeEvent<{ value: string }>) {
     setEmail(event.target.value);
+    props.onChange(InputNames.Email, InputTypes.Info, event.target.value);
   }
 
   return (
-    <TextField
-      id="standard-name"
+    <RTLTextField
+      id="Email-input"
       label={hebrew.EmailHeb}
       value={email}
       onChange={handleChange}
-      style={{ direction: "rtl", width: "100%", margin: "0.5em" }}
+      style={{ width: "100%" }}
     />
   );
 }

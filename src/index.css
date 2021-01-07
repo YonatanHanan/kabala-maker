@@ -11,9 +11,3 @@ body {
 html {
   height: 100%;
 }
-body,
-#root,
-.App {
-  width: 100vw;
-  height: 100%;
-}

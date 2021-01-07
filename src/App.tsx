@@ -1,11 +1,19 @@
 import { Container, Grid } from "@material-ui/core";
-import React from "react";
-import "./App.css";
+import React, { useState } from "react";
 import Display from "./components/Display/Display";
 import Editor from "./components/Editor/Editor";
 import Header from "./components/Header/Header";
+import { DefaultInfo } from "./types/defaults";
+import { InputNames, InputTypes } from "./types/input";
 
 function App() {
+  const [info, setInfo] = useState<Record<InputNames, any>>(DefaultInfo);
+
+  function editorOnChange(name: InputNames, type: InputTypes, value: any) {
+    setInfo({ ...info, [name]: value });
+    console.log(info);
+  }
+
   return (
     <div className="App">
       <Container maxWidth="lg">
@@ -14,10 +22,10 @@ function App() {
             <Header />
           </Grid>
           <Grid item xs={6}>
-            <Display />
+            <Display info={info} />
           </Grid>
           <Grid item xs={6}>
-            <Editor />
+            <Editor onChange={editorOnChange} />
           </Grid>
         </Grid>
       </Container>
