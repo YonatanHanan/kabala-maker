@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, Paper } from "@material-ui/core";
+import { Divider, Grid, Paper } from "@material-ui/core";
 import React from "react";
 import { InputNames } from "../../types/input";
 import ContactInfo from "../Outputs/ContactInfo/ContactInfo";
@@ -13,7 +13,6 @@ type DisplayProps = {
 };
 
 export default function Display(props: DisplayProps) {
-  console.log("display", props);
   const classes = useStyles();
 
   return (

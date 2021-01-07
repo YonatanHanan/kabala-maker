@@ -1,4 +1,3 @@
-import { makeStyles } from "@material-ui/core";
 import { InputNames } from "./input";
 
 export const DefaultInfo = {
@@ -8,10 +7,3 @@ export const DefaultInfo = {
   email: "",
   businessNumber: "",
 } as Record<InputNames, any>;
-
-export const TextAlignLeft = makeStyles({
-  root: {
-    textAlign: "left",
-    direction: "ltr",
-  },
-});

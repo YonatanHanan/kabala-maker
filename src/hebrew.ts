@@ -7,6 +7,7 @@ let hebrew = {
   ContactInfoHeb: "מספר טלפון ופקס",
   EmailHeb: "כתובת אימייל",
   BusinessNumberHeb: "ע.פ/ח.פ",
+  AccordionDetailsBusiness: "פרטי העסק",
 };
 
 export const DefaultInfoPlaceHolder = {

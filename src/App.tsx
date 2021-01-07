@@ -11,7 +11,6 @@ function App() {
 
   function editorOnChange(name: InputNames, type: InputTypes, value: any) {
     setInfo({ ...info, [name]: value });
-    console.log(info);
   }
 
   return (
@@ -22,10 +21,10 @@ function App() {
             <Header />
           </Grid>
           <Grid item xs={6}>
-            <Display info={info} />
+            <Editor onChange={editorOnChange} />
           </Grid>
           <Grid item xs={6}>
-            <Editor onChange={editorOnChange} />
+            <Display info={info} />
           </Grid>
         </Grid>
       </Container>

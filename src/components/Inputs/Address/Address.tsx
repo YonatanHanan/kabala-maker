@@ -1,7 +1,7 @@
+import { TextField } from "@material-ui/core";
 import React, { useState } from "react";
 import hebrew from "../../../hebrew";
 import { InputNames, InputTypes, IOnChange } from "../../../types/input";
-import RTLTextField from "../../BasicTextField/BasicTextField";
 
 export default function Address(props: IOnChange) {
   const [address, setAddress] = useState<string>("");
@@ -12,7 +12,7 @@ export default function Address(props: IOnChange) {
   }
 
   return (
-    <RTLTextField
+    <TextField
       id={`${InputNames.Address}-input`}
       label={hebrew.AddressHeb}
       value={address}

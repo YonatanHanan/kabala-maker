@@ -1,7 +1,7 @@
+import { TextField } from "@material-ui/core";
 import React, { useState } from "react";
 import hebrew from "../../../hebrew";
 import { InputNames, InputTypes, IOnChange } from "../../../types/input";
-import RTLTextField from "../../BasicTextField/BasicTextField";
 export default function ContactInfo(props: IOnChange) {
   const [contactInfo, setContactInfo] = useState<string>("");
 
@@ -11,7 +11,7 @@ export default function ContactInfo(props: IOnChange) {
   }
 
   return (
-    <RTLTextField
+    <TextField
       id="ContactInfo-input"
       label={hebrew.ContactInfoHeb}
       value={contactInfo}

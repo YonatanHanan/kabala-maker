@@ -1,7 +1,7 @@
+import { TextField } from "@material-ui/core";
 import React, { useState } from "react";
 import hebrew from "../../../hebrew";
 import { InputNames, InputTypes, IOnChange } from "../../../types/input";
-import RTLTextField from "../../BasicTextField/BasicTextField";
 
 export default function BusinessName(props: IOnChange) {
   const [businessName, setBusinessName] = useState<string>("");
@@ -16,7 +16,7 @@ export default function BusinessName(props: IOnChange) {
   }
 
   return (
-    <RTLTextField
+    <TextField
       id="BusinessName-input"
       label={hebrew.BusinessNameHeb}
       value={businessName}
